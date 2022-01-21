@@ -1,0 +1,11 @@
+.head{
+    width:100%;
+    background-color: $headingColor;
+}
+
+.head__today{
+    text-align: center;
+    color:$color1;
+    font-size: 40px;
+    font-family: labelFont;
+}

@@ -1,0 +1,297 @@
+@font-face {
+  font-family: labelFont;
+  src: url(/fonts/Anton-Regular.ttf);
+}
+@font-face {
+  font-family: textFont;
+  src: url(/fonts/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+.head {
+  width: 100%;
+  background-color: #29227d;
+}
+
+.head__today {
+  text-align: center;
+  color: #ffffff;
+  font-size: 40px;
+  font-family: labelFont;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: labelFont;
+  letter-spacing: 2px;
+}
+
+p {
+  font-family: textFont;
+}
+
+body {
+  background-image: linear-gradient(180deg, #8875e6, #c8aee6);
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.all {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.main {
+  width: 80%;
+  margin: 50px auto 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main__cities {
+  width: 100%;
+  position: relative;
+  padding: 20%;
+}
+
+.main__cities-city {
+  width: 100%;
+  padding: 20%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 1s ease-in-out;
+  opacity: 0;
+}
+
+.main__cities-active {
+  opacity: 1;
+}
+
+.main__cities-paris {
+  background-image: url("/images/paris.jpg");
+}
+
+.main__cities-berlin {
+  background-image: url("/images/berlin.jpg");
+}
+
+.main__cities-lisbon {
+  background-image: url("/images/lisbon.jpg");
+}
+
+.main__cities-madrid {
+  background-image: url("/images/madrid.jpg");
+}
+
+.main__cities-london {
+  background-image: url("/images/london.jpg");
+}
+
+.main__cities-city--name {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 30px;
+  font-size: 40px;
+  color: #ffffff;
+}
+
+.main__weather-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 140px;
+}
+
+.main__weather {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 30px;
+  transition: 1s ease-in-out;
+  opacity: 0;
+}
+
+.main__weather-active {
+  opacity: 1;
+}
+
+.main__weather-day {
+  width: 12%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 13px;
+}
+.main__weather-day h3 {
+  font-size: 25px;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+.main__weather-day i {
+  font-size: 50px;
+  color: #29227d;
+}
+.main__weather-day p {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.button {
+  padding: 50px;
+  color: #29227d;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+}
+.button i {
+  cursor: pointer;
+  font-size: 70px;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1650px) {
+  .main {
+    width: 100%;
+    padding-top: 50px;
+  }
+
+  .button {
+    padding: 20px;
+  }
+
+  .all {
+    position: relative;
+  }
+
+  .button__left {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .button__right {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .main__weather-day {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0 10px 0;
+  }
+  .main__weather-day i {
+    font-size: 50px;
+  }
+  .main__weather-day h3 {
+    font-size: 30px;
+  }
+  .main__weather-day p {
+    font-size: 25px;
+  }
+}
+@media screen and (min-width: 700px) and (max-width: 1199px) {
+  .main {
+    width: 100%;
+    padding-top: 50px;
+  }
+
+  .button {
+    padding: 20px;
+  }
+
+  .all {
+    position: relative;
+  }
+
+  .button__left {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .button__right {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .main__weather-day {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0 10px 0;
+  }
+  .main__weather-day i {
+    font-size: 40px;
+  }
+  .main__weather-day h3 {
+    font-size: 20px;
+  }
+  .main__weather-day p {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 699px) {
+  .main {
+    width: 100%;
+    padding-top: 50px;
+  }
+
+  .button {
+    padding: 20px;
+  }
+
+  .all {
+    position: relative;
+  }
+
+  .button__left {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .button__right {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .main__weather {
+    flex-direction: column;
+  }
+
+  .main__cities-city--name {
+    padding: 20px;
+    font-size: 30px;
+  }
+
+  .main__weather-day {
+    padding-bottom: 20px;
+  }
+  .main__weather-day i {
+    font-size: 60px;
+  }
+  .main__weather-day h3 {
+    font-size: 30px;
+  }
+  .main__weather-day p {
+    font-size: 25px;
+  }
+}/*# sourceMappingURL=main.css.map */
